@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+    <main>
+
+
+
+<form    NAME="login">
+    
+
+<label>User Name</label>
+ <INPUT TYPE="TEXT" NAME="User" MAXLENGTH="15"> <br><br>
+
+ <label>Password</label>
+<INPUT NAME="IDr" MAXLENGTH="15" HEIGHT="50" type="Password"> <br> <br>
+
+
+<INPUT TYPE="BUTTON" VALUE=" Login " onClick="getin()" HEIGHT="40" WIDTH="500">
+</form>
+
+<SCRIPT LANGUAGE="JavaScript">
+
+function getin()
+{
+window.status=('Loginn Details')
+
+var AccId;
+var User;
+AccId = document.login.IDr.value
+User = document.login.User.value
+
+if (AccId == "" || User == "")
+{
+alert('\nERROR\nPlease Enter your Valid Details\n');
+window.status=('Missing data or Invalid. Check spelling and Ensure Names are in Correct Case.')
+}
+else
+{
+
+var location = '';
+if (User=='love' && AccId=='cat') {
+    location=("manager.html");
+}
+else if (User=='mom' && AccId=='love') {
+    location=("google.com");
+}
+else alert('Wrong pair');
+
+this.location.href = location;
+}
+}
+
+</SCRIPT>
+
+</main>
+</body>
+</html>
